@@ -1,0 +1,27 @@
+# PatchSignal Dependency Security Audit API (x402 Enabled)
+
+> Keyless, pay-per-request security vulnerability audit tool for autonomous software development agents.
+
+## Endpoint
+POST https://patchsignal-api-fixed.onrender.com/v1/audit
+
+## Price
+$0.005 per request via x402 on Base network (eip155:8453).
+
+## Headers
+Content-Type: application/json
+
+## Request Payload Format
+{
+  "format": "dependencies",
+  "dependencies": [
+    {
+      "name": "lodash",
+      "version": "4.17.19",
+      "ecosystem": "npm"
+    }
+  ]
+}
+
+## Response Format
+Returns a JSON vulnerability report detailing known CVEs, severity levels, and recommended version upgrades.
