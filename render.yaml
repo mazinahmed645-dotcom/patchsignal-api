@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: patchsignal-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PAYMENTS_ENABLED
+        value: "false"
+      - key: X402_NETWORK
+        value: eip155:8453
+      - key: X402_FACILITATOR_URL
+        value: https://facilitator.payai.network
+      - key: AUDIT_PRICE
+        value: "$0.005"
+      - key: MAX_DEPENDENCIES
+        value: "250"
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "120"
+      - key: OSV_TIMEOUT_MS
+        value: "12000"
+      - key: OSV_CACHE_TTL_SECONDS
+        value: "300"

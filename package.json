@@ -1,0 +1,27 @@
+{
+  "name": "patchsignal-agent-dependency-audit-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A deterministic, x402-payable dependency vulnerability audit API for AI coding agents.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "node --test",
+    "check": "node --check index.js && node --check src/app.js && node --check src/audit.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@x402/core": "^2.17.0",
+    "@x402/evm": "^2.17.0",
+    "@x402/express": "^2.17.0",
+    "@x402/extensions": "^2.17.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0"
+  }
+}

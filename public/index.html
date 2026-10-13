@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PatchSignal gives AI coding agents a fast, structured dependency vulnerability report from OSV.dev using x402 pay-per-call payments.">
+  <meta name="theme-color" content="#101a2b">
+  <title>PatchSignal — Dependency risk, ready for agents</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0a1020;--panel:#111b2e;--text:#f4f7fb;--muted:#a4b2c8;--line:#263550;--green:#8ee4be;--blue:#89b4ff;--orange:#ffcf87}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 70% -20%,#1a3151 0,transparent 42%),var(--bg);color:var(--text);font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.wrap{width:min(1100px,calc(100% - 36px));margin:0 auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0;border-bottom:1px solid #263550aa}.brand{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:750;letter-spacing:-.02em}.mark{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,#8ee4be,#89b4ff);display:grid;place-items:center;color:#0b1424;font-weight:900}.navlinks{display:flex;gap:22px;color:var(--muted);font-size:14px}.hero{padding:82px 0 64px;display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #37506a;border-radius:999px;padding:6px 12px;color:var(--green);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.dot{width:7px;height:7px;background:var(--green);border-radius:50%}h1{font-size:clamp(38px,5.1vw,62px);line-height:1.04;letter-spacing:-.055em;margin:23px 0 20px;max-width:670px}h1 span{color:var(--green)}.lede{font-size:18px;max-width:600px;color:var(--muted);margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:10px;padding:11px 16px;font-weight:720;font-size:14px;border:1px solid var(--line)}.btn.primary{background:var(--green);border-color:var(--green);color:#07182a}.btn.secondary{color:var(--text);background:#121d30}.fine{font-size:12px;color:#8d9cb3;margin-top:18px}.terminal{background:#0b1424;border:1px solid #31415c;border-radius:16px;overflow:hidden;box-shadow:0 24px 80px #0005}.termbar{display:flex;align-items:center;gap:7px;padding:13px 16px;border-bottom:1px solid #263550;color:#9aabc3;font-size:12px}.traffic{display:flex;gap:5px}.traffic i{width:7px;height:7px;display:block;border-radius:50%;background:#40516b}.termcontent{padding:21px 20px;font:12px/1.8 ui-monospace,SFMono-Regular,Menlo,monospace;overflow-wrap:anywhere;color:#bac9de}.green{color:var(--green)}.orange{color:var(--orange)}.blue{color:var(--blue)}.section{padding:56px 0;border-top:1px solid #26355088}.section h2{font-size:30px;letter-spacing:-.035em;margin:0 0 12px}.sub{color:var(--muted);max-width:680px;margin:0 0 28px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:linear-gradient(180deg,#131f33,#0e1728);border:1px solid var(--line);border-radius:14px;padding:21px}.icon{width:35px;height:35px;border-radius:10px;background:#20364b;display:grid;place-items:center;color:var(--green);font-size:18px}.card h3{font-size:17px;margin:16px 0 7px}.card p{font-size:14px;color:var(--muted);margin:0}.split{display:grid;grid-template-columns:1fr 1fr;gap:24px}.code{background:#0b1424;border:1px solid var(--line);padding:18px;border-radius:12px;white-space:pre-wrap;overflow:auto;font:12px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;color:#c2d0e5}.price{font-size:37px;letter-spacing:-.04em;font-weight:800}.price small{font-size:14px;color:var(--muted);font-weight:500;letter-spacing:0}.note{border-left:3px solid var(--orange);padding:10px 14px;background:#171d2a;color:#c6cfdd;font-size:13px;border-radius:0 8px 8px 0}footer{border-top:1px solid var(--line);padding:25px 0 34px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:780px){.hero{grid-template-columns:1fr;padding:54px 0 44px;gap:30px}.grid{grid-template-columns:1fr}.split{grid-template-columns:1fr}.navlinks{gap:12px}.navlinks a:nth-child(2){display:none}h1{font-size:43px}.section{padding:42px 0}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <div class="brand"><span class="mark">P</span> PatchSignal</div>
+      <nav class="navlinks"><a href="#how">How it works</a><a href="#api">API</a><a href="/openapi.json">OpenAPI spec ↗</a></nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Built for AI coding agents</div>
+          <h1>Dependency risk.<br><span>Ready for agents.</span></h1>
+          <p class="lede">One predictable API call turns exact package versions into a structured vulnerability report—with advisory IDs, source links, and known fixed versions. No LLM call required.</p>
+          <div class="actions"><a class="btn primary" href="#api">View API usage</a><a class="btn secondary" href="/openapi.json">OpenAPI schema ↗</a></div>
+          <p class="fine">Powered by the public OSV.dev advisory database · Pay-per-call with x402 when enabled</p>
+        </div>
+        <div class="terminal" aria-label="Example JSON vulnerability report">
+          <div class="termbar"><span class="traffic"><i></i><i></i><i></i></span><span>POST /v1/audit · example response</span></div>
+          <div class="termcontent">
+            <span class="blue">{</span><br>
+            &nbsp;&nbsp;<span class="green">"status"</span>: <span class="orange">"ok"</span>,<br>
+            &nbsp;&nbsp;<span class="green">"summary"</span>: {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"dependenciesScanned"</span>: <span class="blue">42</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"packagesWithVulnerabilities"</span>: <span class="blue">2</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"vulnerabilitiesFound"</span>: <span class="blue">3</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"highestSeverity"</span>: <span class="orange">"HIGH"</span><br>
+            &nbsp;&nbsp;},<br>
+            &nbsp;&nbsp;<span class="green">"packages"</span>: [<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;{ <span class="green">"name"</span>: <span class="orange">"example-package"</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"fixedVersions"</span>: [<span class="orange">"2.1.4"</span>] }<br>
+            &nbsp;&nbsp;]<br>
+            <span class="blue">}</span><br><br>
+            <span style="color:#7f90a8">// Example only, not live scan data.</span>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="how">
+        <h2>Useful work, not another chatbot</h2>
+        <p class="sub">Coding agents need exact, machine-readable results they can act on. PatchSignal does the deterministic lookup and formatting step, without inventing fixes or relying on model-generated security claims.</p>
+        <div class="grid">
+          <article class="card"><div class="icon">⌁</div><h3>Exact-version checks</h3><p>Checks locked package versions against OSV.dev. It ignores version ranges instead of pretending they are installed versions.</p></article>
+          <article class="card"><div class="icon">✓</div><h3>Actionable JSON</h3><p>Returns advisory IDs, aliases, severity where the source provides it, known fixed versions, dates, and references.</p></article>
+          <article class="card"><div class="icon">↗</div><h3>Agent discovery</h3><p>Includes an OpenAPI schema, an llms.txt guide, and x402 Bazaar metadata on the paid API route.</p></article>
+        </div>
+      </section>
+      <section class="section" id="api">
+        <h2>One API call</h2>
+        <p class="sub">Start with an npm package-lock.json or pinned Python requirements file. You can also send normalized package records from any supported ecosystem.</p>
+        <div class="split">
+          <div>
+            <div class="price">$0.005 <small>USDC per audit request · configurable</small></div>
+            <p class="sub" style="margin-top:10px">One request can include up to 250 exact dependencies by default. The limit is configurable. The service caches repeat lookups briefly to reduce load.</p>
+            <div class="note">The price is a proposed starting point, not a promise of earnings or traffic. Paid agents must support x402 and have a funded payment setup to use the paid route.</div>
+          </div>
+          <div class="code">curl -X POST "$PATCHSIGNAL_URL/v1/audit" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "format": "dependencies",
+    "dependencies": [{
+      "name": "lodash",
+      "version": "4.17.19",
+      "ecosystem": "npm"
+    }]
+  }'
+
+# For a paid deployment, use an x402-compatible
+# client so it can respond to HTTP 402 automatically.</div>
+        </div>
+      </section>
+      <section class="section">
+        <h2>Transparent by design</h2>
+        <p class="sub">No LLM provider key is required for the audit itself. The report is only as complete and current as the upstream advisory database; it is a useful signal, not a guarantee that a package or application is secure.</p>
+        <div class="actions"><a class="btn secondary" href="/health">Service health ↗</a><a class="btn secondary" href="/llms.txt">Agent guide ↗</a><a class="btn secondary" href="/openapi.json">OpenAPI JSON ↗</a></div>
+      </section>
+    </main>
+    <footer><span>PatchSignal · Agent dependency risk API</span><span>Independent project · Not affiliated with OSV.dev or x402</span></footer>
+  </div>
+</body>
+</html>
